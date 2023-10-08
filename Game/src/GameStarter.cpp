@@ -4,7 +4,24 @@
 #include <iostream>
 #include <Uranium.h>
 
-int main() {
+class GameStarter : public Uranium::Core::Application {
+public:
+	explicit GameStarter() noexcept :
+		Application()
+	{
+		
+		// Create window and register it to the application
 
-	std::cout << "Game started" << std::endl;
+	}
+	
+	~GameStarter() {
+		
+	}
+
+private:
+
+};
+
+Uranium::Core::Application* Uranium::Core::createApplication() {
+	return new GameStarter();
 }
