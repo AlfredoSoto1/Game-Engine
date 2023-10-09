@@ -6,7 +6,7 @@
 
 namespace Uranium::Core {
 
-	class Context;
+	extern class Context;
 
 	class Application {
 	public:

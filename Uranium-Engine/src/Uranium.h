@@ -9,5 +9,10 @@
 #endif // _DEBUG
 
 // Uranium-Engine headers
+
+#include "Graphics/Display/Window.h"
+#include "Graphics/Display/WindowModes.h"
+#include "Graphics/Display/WindowProps.h"
+
 #include "Core/Application.h"
 #include "Core/EntryPoint.h"

@@ -87,11 +87,19 @@
     <ClInclude Include="src\Core\Application.h" />
     <ClInclude Include="src\Core\Context.h" />
     <ClInclude Include="src\Core\EntryPoint.h" />
+    <ClInclude Include="src\Input\Components\Monitor.h" />
+    <ClInclude Include="src\Graphics\Display\Window.h" />
+    <ClInclude Include="src\Graphics\Display\WindowProps.h" />
     <ClInclude Include="src\Uranium.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Application.cpp" />
     <ClCompile Include="src\Core\Context.cpp" />
+    <ClCompile Include="src\Graphics\Display\WindowProps.cpp" />
+    <ClCompile Include="src\Input\Components\Monitor.cpp" />
+    <ClCompile Include="src\Graphics\Display\Window.cpp" />
+    <ClCompile Include="src\Graphics\Display\WindowModes.cpp" />
+    <ClCompile Include="src\Graphics\Display\WindowModes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

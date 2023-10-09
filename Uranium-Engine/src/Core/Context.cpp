@@ -1,6 +1,10 @@
-#include "Context.h"
-
+#define GLEW_STATIC
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
 #include <iostream>
+
+#include "Context.h"
+#include "Graphics/Display/Window.h"
 
 namespace Uranium::Core {
 
@@ -41,10 +45,30 @@ namespace Uranium::Core {
 		// when the thread starts running
 		contextActive = true;
 
-		// Run context here
+		// Set the default context for 'this' thread.
+		glfwMakeContextCurrent(*window);
 
-		for (int i = 0; i < 100000; i++) {
-			std::cout << "Context running" << std::endl;
+		// Run context here
+		while (!window->shouldClose() && !exitRequested) {
+			//// check if window has resized
+			//int width, height;
+			//glfwGetFramebufferSize(*window, &width, &height);
+			//glViewport(0, 0, width, height);
+
+			// render scene here
+			glClear(GL_COLOR_BUFFER_BIT);
+			glClearColor(1.0, 0.0, 0.0, 1.0);
+
+			// TODO - Make swap buffers only
+			// if its focused.. also make it so
+			// that a thread finishes, it joins it automatically
+			//if (window->getCallback().hasFocused()) {
+			//	// Swap front and back buffers
+			//	glfwSwapBuffers(*window);
+			//}
+
+			// TODO: fix when multi-threaded
+			//glfwSwapBuffers(*window);
 		}
 	}
 }

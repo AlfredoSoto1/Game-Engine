@@ -4,7 +4,9 @@
 #include <iostream>
 #include <Uranium.h>
 
-class GameStarter : public Uranium::Core::Application {
+using namespace Uranium;
+
+class GameStarter : public Core::Application {
 public:
 	explicit GameStarter() noexcept :
 		Application()
@@ -12,6 +14,9 @@ public:
 		
 		// Create window and register it to the application
 
+		Graphics::Display::Window window;
+
+		
 	}
 	
 	~GameStarter() {
@@ -22,6 +27,6 @@ private:
 
 };
 
-Uranium::Core::Application* Uranium::Core::createApplication() {
+Core::Application* Core::createApplication() {
 	return new GameStarter();
 }

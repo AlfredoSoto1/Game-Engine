@@ -1,13 +1,22 @@
 #pragma once
 
+#include <memory>
 #include <thread>
 
+namespace Uranium::Graphics::Display {
+	extern class Window;
+}
+
 namespace Uranium::Core {
+
 	class Context {
 	public:
 		/*
-		* Context constructor
+		* Custom alias
 		*/
+		using Window = Uranium::Graphics::Display::Window;
+
+	public:
 		explicit Context() noexcept;
 		
 		virtual ~Context();
@@ -51,5 +60,7 @@ namespace Uranium::Core {
 		bool exitRequested;
 
 		std::thread contextThread;
+
+		std::unique_ptr<Window> window;
 	};
 }
