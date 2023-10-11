@@ -96,6 +96,7 @@
     <ClCompile Include="src\Core\Application.cpp" />
     <ClCompile Include="src\Core\Context.cpp" />
     <ClCompile Include="src\Core\Core.ixx" />
+    <ClCompile Include="src\Core\EntryPoint.cppm" />
     <ClCompile Include="src\Graphics\Display\WindowProps.cpp" />
     <ClCompile Include="src\Input\Components\Monitor.cpp" />
     <ClCompile Include="src\Graphics\Display\Window.cpp" />

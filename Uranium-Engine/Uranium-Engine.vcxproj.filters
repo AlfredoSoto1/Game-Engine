@@ -62,5 +62,8 @@
     <ClCompile Include="src\Core\Core.ixx">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Core\EntryPoint.cppm">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
