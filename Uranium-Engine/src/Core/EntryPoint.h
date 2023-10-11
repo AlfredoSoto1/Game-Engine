@@ -29,7 +29,7 @@ namespace Uranium::Core {
 				application->addArgument(argv[i]);
 
 			// Run application
-			application->run();
+			//application->run();
 		}
 
 		~EntryPoint() {
@@ -42,6 +42,9 @@ namespace Uranium::Core {
 	};
 }
 
+/*
+* Entry point definition
+*/
 auto main(int argc, char* argv[]) -> int {
 
 	using namespace Uranium::Core;

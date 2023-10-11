@@ -49,26 +49,26 @@ namespace Uranium::Core {
 		glfwMakeContextCurrent(*window);
 
 		// Run context here
-		while (!window->shouldClose() && !exitRequested) {
-			//// check if window has resized
-			//int width, height;
-			//glfwGetFramebufferSize(*window, &width, &height);
-			//glViewport(0, 0, width, height);
+		//while (!window->shouldClose() && !exitRequested) {
+		//	//// check if window has resized
+		//	//int width, height;
+		//	//glfwGetFramebufferSize(*window, &width, &height);
+		//	//glViewport(0, 0, width, height);
 
-			// render scene here
-			glClear(GL_COLOR_BUFFER_BIT);
-			glClearColor(1.0, 0.0, 0.0, 1.0);
+		//	// render scene here
+		//	glClear(GL_COLOR_BUFFER_BIT);
+		//	glClearColor(1.0, 0.0, 0.0, 1.0);
 
-			// TODO - Make swap buffers only
-			// if its focused.. also make it so
-			// that a thread finishes, it joins it automatically
-			//if (window->getCallback().hasFocused()) {
-			//	// Swap front and back buffers
-			//	glfwSwapBuffers(*window);
-			//}
+		//	// TODO - Make swap buffers only
+		//	// if its focused.. also make it so
+		//	// that a thread finishes, it joins it automatically
+		//	//if (window->getCallback().hasFocused()) {
+		//	//	// Swap front and back buffers
+		//	//	glfwSwapBuffers(*window);
+		//	//}
 
-			// TODO: fix when multi-threaded
-			//glfwSwapBuffers(*window);
-		}
+		//	// TODO: fix when multi-threaded
+		//	glfwSwapBuffers(*window);
+		//}
 	}
 }

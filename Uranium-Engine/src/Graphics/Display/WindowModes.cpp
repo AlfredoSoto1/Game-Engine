@@ -47,68 +47,68 @@ namespace Uranium::Graphics::Display {
 	}
 
 	void WindowModes:: restore() {
-		maximized = false;
-		minimized = false;
-		if (glWindow == nullptr)
-			return;
+		//maximized = false;
+		//minimized = false;
+		//if (glWindow == nullptr)
+		//	return;
 
-		Window& window = *static_cast<Window*>(glfwGetWindowUserPointer(glWindow));
-		window.getCallback().setHasResized(true);
+		//Window& window = *static_cast<Window*>(glfwGetWindowUserPointer(glWindow));
+		//window.getCallback().setHasResized(true);
 
-		if (not fullscreen) {
-			glfwRestoreWindow(glWindow);
-			return;
-		}
+		//if (not fullscreen) {
+		//	glfwRestoreWindow(glWindow);
+		//	return;
+		//}
 
-		fullscreen = false;
+		//fullscreen = false;
 
-		// Get the current position of the window
-		// and keep track of the corresponding values
-		int xpos;
-		int ypos;
-		glfwGetWindowPos(glWindow, &xpos, &ypos);
+		//// Get the current position of the window
+		//// and keep track of the corresponding values
+		//int xpos;
+		//int ypos;
+		//glfwGetWindowPos(glWindow, &xpos, &ypos);
 
-		// Update position without setting a new
-		// position with glfw internally
-		window.getProps().getPosition().x = xpos;
-		window.getProps().getPosition().y = ypos;
+		//// Update position without setting a new
+		//// position with glfw internally
+		//window.getProps().getPosition().x = xpos;
+		//window.getProps().getPosition().y = ypos;
 
-		// return window to its default dimensions:
-		glfwSetWindowMonitor(
-			glWindow,
-			nullptr,                                 // current active monitor
-			xpos, ypos,                              // position of the extended window
-			window.getProps().getDimension().width,  // width of the window
-			window.getProps().getDimension().height, // height of the window
-			GLFW_DONT_CARE                           // refreshrate in Hz
-		);
+		//// return window to its default dimensions:
+		//glfwSetWindowMonitor(
+		//	glWindow,
+		//	nullptr,                                 // current active monitor
+		//	xpos, ypos,                              // position of the extended window
+		//	window.getProps().getDimension().width,  // width of the window
+		//	window.getProps().getDimension().height, // height of the window
+		//	GLFW_DONT_CARE                           // refreshrate in Hz
+		//);
 	}
 
 	void WindowModes:: maximize() {
 		if (fullscreen)
 			return;
 
-		maximized = false;
+		/*maximized = false;
 		minimized = true;
 		if (glWindow == nullptr)
 			return;
 		glfwIconifyWindow(glWindow);
 
 		Window& window = *static_cast<Window*>(glfwGetWindowUserPointer(glWindow));
-		window.getCallback().setHasResized(true);
+		window.getCallback().setHasResized(true);*/
 	}
 
 	void WindowModes:: minimize() {
 		if (fullscreen)
 			return;
 
-		maximized = false;
+		/*maximized = false;
 		minimized = true;
 		if (glWindow == nullptr)
 			return;
 		glfwIconifyWindow(glWindow);
 
 		Window& window = *static_cast<Window*>(glfwGetWindowUserPointer(glWindow));
-		window.getCallback().setHasResized(true);
+		window.getCallback().setHasResized(true);*/
 	}
 }

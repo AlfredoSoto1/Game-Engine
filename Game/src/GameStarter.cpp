@@ -1,8 +1,7 @@
 
 #define UR_PLATFORM_WINDOWS
 
-#include <iostream>
-#include <Uranium.h>
+#include <Uranium.h>;
 
 using namespace Uranium;
 
@@ -11,16 +10,16 @@ public:
 	explicit GameStarter() noexcept :
 		Application()
 	{
-		
+
 		// Create window and register it to the application
 
 		Graphics::Display::Window window;
 
-		
+
 	}
-	
+
 	~GameStarter() {
-		
+
 	}
 
 private:

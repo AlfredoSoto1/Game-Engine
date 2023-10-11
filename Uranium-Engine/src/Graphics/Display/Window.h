@@ -24,8 +24,8 @@ namespace Uranium::Graphics::Display {
 
 		inline bool shouldClose() const;
 
-		auto getModes() -> const WindowModes& const;
-		auto getProps() -> const WindowProps& const;
+		//auto getModes() -> const WindowModes& const;
+		//auto getProps() -> const WindowProps& const;
 
 	public:
 		/*
