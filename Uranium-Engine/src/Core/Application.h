@@ -22,6 +22,8 @@ namespace Uranium::Core {
 		static Application* appSingleton;
 
 		static void diagnosticErrors(int error, const char* description);
+
+		extern friend void buildApplication(const Application& application, int argc, char* argv[]);
 		
 	public:
 		/*
