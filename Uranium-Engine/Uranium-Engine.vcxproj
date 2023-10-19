@@ -84,7 +84,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Core\Application.h" />
+    <ClInclude Include="src\Core\Application.ixx" />
     <ClInclude Include="src\Core\Context.h" />
     <ClInclude Include="src\Core\EntryPoint.h" />
     <ClInclude Include="src\Input\Components\Monitor.h" />
@@ -95,7 +95,6 @@
   <ItemGroup>
     <ClCompile Include="src\Core\Application.cpp" />
     <ClCompile Include="src\Core\Context.cpp" />
-    <ClCompile Include="src\Core\Core.ixx" />
     <ClCompile Include="src\Core\EntryPoint.cppm" />
     <ClCompile Include="src\Graphics\Display\WindowProps.cpp" />
     <ClCompile Include="src\Input\Components\Monitor.cpp" />

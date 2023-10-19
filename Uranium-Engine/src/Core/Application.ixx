@@ -1,8 +1,9 @@
-#pragma once
 
-#include <string> 
-#include <vector> 
-#include <memory> 
+export module Uranium.Core.Application;
+
+import <string>;
+import <vector>; 
+import <memory>; 
 
 namespace Uranium::Core {
 
@@ -21,9 +22,15 @@ namespace Uranium::Core {
 		*/
 		static Application* appSingleton;
 
+		/*
+		* Default method that logs any GL errors
+		*/
 		static void diagnosticErrors(int error, const char* description);
 
-		extern friend void buildApplication(const Application& application, int argc, char* argv[]);
+		/*
+		* This gets called externally where the entry point is defined
+		*/
+		friend void buildApplication(int argc, char* argv[]);
 		
 	public:
 		/*
@@ -75,4 +82,6 @@ namespace Uranium::Core {
 		std::vector<std::string> arguments;
 		std::vector<std::unique_ptr<Context>> contexts;
 	};
+	
+	extern void buildApplication(int argc, char* argv[]);
 }
